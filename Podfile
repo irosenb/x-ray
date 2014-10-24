@@ -4,7 +4,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'WifiPassword' do
-
+	pod 'SSKeychain'
+  pod 'AHKeychain'
+  pod 'MASShortcut'
 end
 
 target 'WifiPasswordTests' do
