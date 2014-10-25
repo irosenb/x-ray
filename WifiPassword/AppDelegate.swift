@@ -25,10 +25,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var wifiName : String!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        var error: NSError?
-        var interface = CWInterface(interfaceName: nil).ssid()
-        password.stringValue = SSKeychain.passwordForService("AirPort", account: interface)
-        
         window.styleMask = NSBorderlessWindowMask
     }
     
@@ -41,19 +37,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menuItem.action = Selector("setWindowVisible:")
         menuItem.keyEquivalent = "p"
         menu.addItem(menuItem)
-        
     }
     
     func setWindowVisible(sender: AnyObject) {
         if (wifiName != CWInterface(interfaceName: nil).ssid()) {
             wifiName = CWInterface(interfaceName: nil).ssid()
-
+            
             wifi.stringValue = wifiName
             password.stringValue = SSKeychain.passwordForService("AirPort", account: wifiName)
         }
-       
-        self.window!.orderFront(self)
-        
+        window.center()
+        self.window!.orderFrontRegardless()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
