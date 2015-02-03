@@ -7,12 +7,41 @@
 //
 
 import Cocoa
+import CoreWLAN
 
 class MasterViewController: NSViewController {
+    
+    @IBOutlet weak var window: NSWindow!
+    
+    @IBOutlet weak var password: NSTextField!
+    
+    @IBOutlet weak var wifi: NSTextField!
+    
+    var statusBar = NSStatusBar.systemStatusBar()
+    var statusBarItem: NSStatusItem = NSStatusItem()
+    var menu: NSMenu = NSMenu()
+    var menuItem : NSMenuItem = NSMenuItem()
+    var wifiName : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        statusBarItem = statusBar.statusItemWithLength(-1)
+        statusBarItem.menu = menu
+        statusBarItem.title = "password"
+        
+        menuItem.title = "Show"
+        menuItem.action = Selector("setWindowVisible:")
+        menuItem.keyEquivalent = "p"
+        menu.addItem(menuItem)
+    }
+    
+    func getPassword() {
+        if (wifiName != CWInterface(interfaceName: nil).ssid()) {
+            wifiName = CWInterface(interfaceName: nil).ssid()
+            
+            wifi.stringValue = wifiName
+            password.stringValue = SSKeychain.passwordForService("AirPort", account: wifiName)
+        }
     }
     
 }
