@@ -9,39 +9,46 @@
 import Cocoa
 import CoreWLAN
 
-class MasterViewController: NSViewController {
+class MasterViewController: NSWindowController {
     
-    @IBOutlet weak var window: NSWindow!
-    
+//    @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var password: NSTextField!
     
-    @IBOutlet weak var wifi: NSTextField!
+    @IBOutlet weak var wifiField: NSTextField!
     
     var statusBar = NSStatusBar.systemStatusBar()
     var statusBarItem: NSStatusItem = NSStatusItem()
-    var menu: NSMenu = NSMenu()
     var menuItem : NSMenuItem = NSMenuItem()
-    var wifiName : String!
+    var wifiMenu = NSMenu()
+    var wifi: Wifi!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func windowDidLoad() {
+        super.windowDidLoad()
+        println("Hello world")
         statusBarItem = statusBar.statusItemWithLength(-1)
         statusBarItem.menu = menu
         statusBarItem.title = "password"
         
         menuItem.title = "Show"
-        menuItem.action = Selector("setWindowVisible:")
+        menuItem.action = Selector("showPassword:")
         menuItem.keyEquivalent = "p"
-        menu.addItem(menuItem)
+        wifiMenu.addItem(menuItem)
+    }
+    
+    func showPassword(sender: AnyObject) {
+        if (wifi.network != Wifi().network) {
+            getPassword()
+        }
+        window!.center()
+        self.window!.orderFrontRegardless()
+        self.window!.orderedIndex = 0
     }
     
     func getPassword() {
-        if (wifiName != CWInterface(interfaceName: nil).ssid()) {
-            wifiName = CWInterface(interfaceName: nil).ssid()
-            
-            wifi.stringValue = wifiName
-            password.stringValue = SSKeychain.passwordForService("AirPort", account: wifiName)
-        }
+        wifi = Wifi()
+        
+        wifiField.stringValue = wifi.network
+        password.stringValue = wifi.password
     }
     
 }
