@@ -10,11 +10,15 @@ import Cocoa
 import CoreWLAN 
 
 class Wifi {
-    var network, password: String!
+    var network: String!
+    var password: String {
+        get {
+            return SSKeychain.passwordForService("AirPort", account: network)
+        }
+    }
     
     init() {
         network = CWInterface(interfaceName: nil).ssid()
-        password = SSKeychain.passwordForService("AirPort", account: network)
     }
     
 }
