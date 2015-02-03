@@ -7,7 +7,14 @@
 //
 
 import Cocoa
+import CoreWLAN 
 
-class Wifi: NSObject {
-
+class Wifi {
+    var network, password: String!
+    
+    init() {
+        network = CWInterface(interfaceName: nil).ssid()
+        password = SSKeychain.passwordForService("AirPort", account: network)
+    }
+    
 }

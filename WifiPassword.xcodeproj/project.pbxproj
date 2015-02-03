@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		642EBAA116E4F6F711A8B07D /* libPods-WifiPassword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03849A9CCC40C7A38FC74A3A /* libPods-WifiPassword.a */; };
+		6A59B0061A80C2AA00C17610 /* Wifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A59B0051A80C2AA00C17610 /* Wifi.swift */; };
 		6AB67BE619F76FD1002CB2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB67BE519F76FD1002CB2E5 /* AppDelegate.swift */; };
 		6AB67BE819F76FD1002CB2E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB67BE719F76FD1002CB2E5 /* Images.xcassets */; };
 		6AB67BEB19F76FD1002CB2E5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AB67BE919F76FD1002CB2E5 /* MainMenu.xib */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		03849A9CCC40C7A38FC74A3A /* libPods-WifiPassword.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WifiPassword.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A59B0051A80C2AA00C17610 /* Wifi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wifi.swift; sourceTree = "<group>"; };
 		6AB67BE019F76FD1002CB2E5 /* WifiPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB67BE419F76FD1002CB2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AB67BE519F76FD1002CB2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				6AB67BE319F76FD1002CB2E5 /* Supporting Files */,
 				6AE758F219F86B3E008828DD /* MasterViewController.swift */,
 				6AE758F319F86B3E008828DD /* MasterViewController.xib */,
+				6A59B0051A80C2AA00C17610 /* Wifi.swift */,
 			);
 			path = WifiPassword;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				6AE758F419F86B3E008828DD /* MasterViewController.swift in Sources */,
 				6AB67BE619F76FD1002CB2E5 /* AppDelegate.swift in Sources */,
+				6A59B0061A80C2AA00C17610 /* Wifi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
