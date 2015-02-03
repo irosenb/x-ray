@@ -26,32 +26,18 @@ class MasterViewController: NSWindowController {
         super.windowDidLoad()
         println("Hello world")
         wifiWindow.styleMask = NSBorderlessWindowMask
-//        showPassword(self)
-//        statusBarItem = statusBar.statusItemWithLength(-1)
-//        statusBarItem.menu = menu
-//        statusBarItem.title = "password"
-//        
-//        menuItem.title = "Show"
-//        menuItem.action = Selector("showPassword:")
-//        menuItem.keyEquivalent = "p"
-//        wifiMenu.addItem(menuItem)
     }
     
     func showPassword(sender: AnyObject) {
         if (wifi?.network != Wifi().network) {
-            getPassword()
+            setPassword()
         }
         wifiWindow.center()
-        wifiWindow.makeFirstResponder(self)
-        wifiWindow.makeKeyWindow()
-//        wifiWindow.makeKeyAndOrderFront(wifiWindow)
-        println(wifiWindow.keyWindow)
-        self.wifiWindow.orderFrontRegardless()
-//        self.wifiWindow.orderedIndex = 0
-
+        wifiWindow.becomeKeyWindow()
+        wifiWindow.makeKeyAndOrderFront(wifiWindow)
     }
     
-    func getPassword() {
+    func setPassword() {
         wifi = Wifi()
         
         wifiField.stringValue = wifi!.network
