@@ -48,6 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         window.center()
         self.window!.orderFrontRegardless()
+        self.window.orderedIndex = 0
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
