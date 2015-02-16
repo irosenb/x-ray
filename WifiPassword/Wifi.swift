@@ -13,6 +13,9 @@ class Wifi {
     var network: String!
     var password: String {
         get {
+            if (CWInterface(interfaceName: nil).security() == CWSecurity.None) {
+                return "None"
+            }
             return SSKeychain.passwordForService("AirPort", account: network)
         }
     }
