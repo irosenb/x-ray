@@ -12,28 +12,26 @@ import CoreWLAN
 class MasterViewController: NSWindowController {
 
     @IBOutlet weak var password: NSTextField!
-    
     @IBOutlet var wifiWindow: NSWindow!
     @IBOutlet weak var wifiField: NSTextField!
-    
-    var statusBar = NSStatusBar.systemStatusBar()
-    var statusBarItem: NSStatusItem = NSStatusItem()
-    var menuItem : NSMenuItem = NSMenuItem()
-    var wifiMenu = NSMenu()
+
     var wifi: Wifi?
 
     override func windowDidLoad() {
         super.windowDidLoad()
         println("Hello world")
-        wifiWindow.styleMask = NSBorderlessWindowMask
+//        wifiWindow.styleMask = NSBorderlessWindowMask
     }
     
     func showPassword(sender: AnyObject) {
         if (wifi?.network != Wifi().network) {
             setPassword()
         }
+//NSWorkspace.sharedWorkspace().iconForFileType(NSFileTypeForHFSTypeCode(kGenericNetworkIcon))
         wifiWindow.center()
         wifiWindow.becomeKeyWindow()
+        wifiWindow.becomeFirstResponder()
+        wifiWindow.becomeMainWindow()
         wifiWindow.makeKeyAndOrderFront(wifiWindow)
     }
     

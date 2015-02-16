@@ -7,7 +7,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MasterViewController" customModule="WifiPassword" customModuleProvider="target">
             <connections>
                 <outlet property="password" destination="u9o-Ha-lZ6" id="Geq-aL-q2V"/>
-                <outlet property="wifiField" destination="xLb-KU-g56" id="3Zo-rj-RLW"/>
+                <outlet property="wifiField" destination="xLb-KU-g56" id="cdi-y8-vIt"/>
                 <outlet property="wifiWindow" destination="nEB-Pw-Oej" id="BXi-SC-OTR"/>
             </connections>
         </customObject>
@@ -15,8 +15,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="WifiPassword" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="nEB-Pw-Oej">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="431" y="196" width="480" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
             <view key="contentView" id="7Ia-EK-7B7">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
@@ -30,12 +30,12 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-KU-g56">
-                        <rect key="frame" x="-2" y="267" width="484" height="73"/>
-                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="Wix Lounge" id="cHW-Lq-gt0">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-KU-g56">
+                        <rect key="frame" x="-2" y="238" width="484" height="122"/>
+                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="FBI Surveillance Van #4" id="cHW-Lq-gt0">
                             <font key="font" size="50" name="HelveticaNeue-Medium"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
