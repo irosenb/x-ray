@@ -16,22 +16,22 @@
         <window title="WifiPassword" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="nEB-Pw-Oej">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="431" y="196" width="480" height="360"/>
+            <rect key="contentRect" x="431" y="196" width="480" height="371"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
             <view key="contentView" id="7Ia-EK-7B7">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="371"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9o-Ha-lZ6">
-                        <rect key="frame" x="-2" y="144" width="484" height="73"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9o-Ha-lZ6">
+                        <rect key="frame" x="142" y="162" width="196" height="60"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="wixrocks" id="7Bd-HD-hRF">
                             <font key="font" size="50" name="HelveticaNeue-Light"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-KU-g56">
-                        <rect key="frame" x="-2" y="238" width="484" height="122"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsExpansionToolTips="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-KU-g56">
+                        <rect key="frame" x="-2" y="217" width="484" height="134"/>
                         <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="FBI Surveillance Van #4" id="cHW-Lq-gt0">
                             <font key="font" size="50" name="HelveticaNeue-Medium"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -39,6 +39,15 @@
                         </textFieldCell>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="xLb-KU-g56" secondAttribute="centerY" constant="119" id="1xd-6a-5zE"/>
+                    <constraint firstItem="xLb-KU-g56" firstAttribute="leading" secondItem="7Ia-EK-7B7" secondAttribute="leading" id="8yD-A3-GI5"/>
+                    <constraint firstAttribute="centerX" secondItem="u9o-Ha-lZ6" secondAttribute="centerX" id="PAL-ex-HIi"/>
+                    <constraint firstAttribute="trailing" secondItem="xLb-KU-g56" secondAttribute="trailing" id="WEQ-js-K0B"/>
+                    <constraint firstAttribute="centerY" secondItem="u9o-Ha-lZ6" secondAttribute="centerY" constant="0.5" id="mo8-1s-pgP"/>
+                    <constraint firstAttribute="centerX" secondItem="xLb-KU-g56" secondAttribute="centerX" id="nOq-jp-eQW"/>
+                    <constraint firstItem="xLb-KU-g56" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Ia-EK-7B7" secondAttribute="top" priority="750" constant="5" id="sy6-km-bNC"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="177" y="404"/>
         </window>
