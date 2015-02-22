@@ -58,7 +58,7 @@
                         </constraints>
                     </customView>
                     <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEl-iW-FqZ">
-                        <rect key="frame" x="20" y="87" width="531" height="61"/>
+                        <rect key="frame" x="20" y="154" width="531" height="61"/>
                         <subviews>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytN-ro-FIh">
                                 <rect key="frame" x="84" y="0.0" width="449" height="61"/>
@@ -66,7 +66,7 @@
                                     <constraint firstAttribute="height" constant="61" id="E83-EL-GDY"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="372" id="ZCG-IQ-HxE"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="Hello world" id="i2a-kA-qfz">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="left" title="qwerty" id="i2a-kA-qfz">
                                     <font key="font" size="50" name="HelveticaNeue-Light"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -105,6 +105,6 @@
     </objects>
     <resources>
         <image name="key" width="1200" height="1200"/>
-        <image name="wifi" width="600" height="700"/>
+        <image name="wifi" width="471" height="350"/>
     </resources>
 </document>
