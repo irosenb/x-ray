@@ -20,21 +20,18 @@ class MasterViewController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         println("Hello world")
-//        wifiWindow.styleMask = NSBorderlessWindowMask
     }
     
     func showPassword(sender: AnyObject) {
         if (wifi?.network != Wifi().network) {
             setPassword()
         }
-//NSWorkspace.sharedWorkspace().iconForFileType(NSFileTypeForHFSTypeCode(kGenericNetworkIcon))
+        
         wifiWindow.center()
-        wifiWindow.becomeKeyWindow()
-        wifiWindow.becomeFirstResponder()
-        wifiWindow.becomeMainWindow()
+        wifiWindow.level = kCGFloatingWindowLevelKey
         wifiWindow.makeKeyAndOrderFront(wifiWindow)
     }
-    
+
     func setPassword() {
         wifi = Wifi()
         

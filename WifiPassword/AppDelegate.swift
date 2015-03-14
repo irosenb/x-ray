@@ -26,7 +26,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var controller = MasterViewController(windowNibName: "MasterViewController")
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        window.styleMask = NSBorderlessWindowMask
         controller.showWindow(nil)
     }
     
@@ -43,18 +42,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func openWifiWindow(sender: AnyObject) {
         controller.showPassword(self)
-    }
-    
-    func setWindowVisible(sender: AnyObject) {
-        if (wifiName != CWInterface(interfaceName: nil).ssid()) {
-            wifiName = CWInterface(interfaceName: nil).ssid()
-            
-            wifi.stringValue = wifiName
-            password.stringValue = SSKeychain.passwordForService("AirPort", account: wifiName)
-        }
-        window.center()
-        self.window!.orderFrontRegardless()
-        self.window.orderedIndex = 0
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
