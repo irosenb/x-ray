@@ -13,7 +13,7 @@ class Wifi {
     var network: String!
     var password: String {
         get {
-            if (CWInterface(interfaceName: nil).security() == CWSecurity.None) {
+            if (CWWiFiClient.sharedWiFiClient().interface().security() == CWSecurity.None) {
                 return "None"
             }
             return SSKeychain.passwordForService("AirPort", account: network)
@@ -21,7 +21,7 @@ class Wifi {
     }
     
     init() {
-        network = CWInterface(interfaceName: nil).ssid()
+        network = CWWiFiClient.sharedWiFiClient().interface().ssid()
     }
     
 }

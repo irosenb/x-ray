@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MasterViewController" customModule="WifiPassword" customModuleProvider="target">
@@ -19,7 +19,7 @@
             <rect key="contentRect" x="431" y="196" width="551" height="371"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
             <value key="minSize" type="size" width="480" height="371"/>
-            <view key="contentView" id="7Ia-EK-7B7">
+            <view key="contentView" id="7Ia-EK-7B7" customClass="IRView" customModule="WifiPassword" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="551" height="371"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
