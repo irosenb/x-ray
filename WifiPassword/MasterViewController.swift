@@ -19,7 +19,7 @@ class MasterViewController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        println("Hello world")
+        wifiWindow.title = "X-Ray"
     }
     
     func showPassword(sender: AnyObject) {
